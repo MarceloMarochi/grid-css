@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color:rgb(130, 24, 24);
+    padding: 1rem;
+
+    /* GRID */
+    display: grid;
+
+    /* Espaciado */
+    grid-gap: 1rem;
+
+    /* Filas (Eje Y)*/
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh; 
+
+    /* Columnas (Tamaño sobre el eje X de cada columna) */
+    grid-template-columns: 12rem auto;
+
+    /* Áreas */
+    grid-template-areas: 
+        "header header"
+        "nav main"
+        "nav footer"
+}
+
+header, nav, main, footer {
+    padding: 1rem;
+    background-color: black;
+    color: white;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}   
